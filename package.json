@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ben Boltzman <bboltzman@zuritraining.com>",
-  "license": "BSD-1-Clause"
+  "license": "BSD-1-Clause",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.8"
+  }
 }
