@@ -18,8 +18,21 @@ mongoose.connect(dbAddress, {
     // parse request payload
 
 app.get('/', (req, res) => {
+    //user.find() returns a promise hence requuires async function
     const data = User.find({})
-    res.status(200).json({ message: "successful", data: data })
+        .then((data) => { res.status(200).json({ message: "successful", data: data }) })
+        .catch((err) => { res.status(500).json({ error: err }) })
+
+})
+app.post('/', (req, res) => {
+    const user = new User({ 'name': req.body.name, 'email': req.body.email, 'country': req.body.country })
+    user.save(function(err) {
+        if (err) {
+            console.log(err); //TypeError: user.save is not a function
+        }
+        res.send("user created!");
+    })
+
 })
 app.use(express.urlencoded({ extended: false }))
     // parse json
