@@ -2,7 +2,7 @@ const User = require('./userModel')
 const mongoose = require('mongoose')
 const express = require('express');
 const { db } = require('./userModel');
-const dbAddress = 'mongodb+srv://One356-337:<One356-337@cluster0.olacf.mongodb.net/crudappdb?retryWrites=true&w=majority'
+const dbAddress = 'mongodb+srv://One356-337:One356-337@cluster0.olacf.mongodb.net/crudappdb?retryWrites=true&w=majority'
 const port = process.env.PORT || 5000
 const app = express()
     // parse request payload
