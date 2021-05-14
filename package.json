@@ -4,7 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "script": "start"
+        "start": "node index.js",
+        "prod:logs": "heroku log -t",
+        "deploy": "git push heroku main"
     },
     "author": "Ben Boltzman <bboltzman@zuritraining.com>",
     "license": "BSD-1-Clause",
